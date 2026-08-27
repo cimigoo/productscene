@@ -58,7 +58,7 @@ async function callFal<T>(
 export async function removeBackground(
   imageDataUrl: string
 ): Promise<string> {
-  const result = await callFal<FalResult>("/briaai/rmbg-1.4", {
+  const result = await callFal<FalResult>("/fal-ai/birefnet", {
     image_url: imageDataUrl,
   });
   const url = result.image?.url || result.images?.[0]?.url;
